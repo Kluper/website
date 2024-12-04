@@ -1,0 +1,412 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Body Styling */
+body {
+    background: linear-gradient(135deg, #654468, #7e4949, #26587b);
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite;
+    color: #f0f0f0;
+    font-family: 'Josefin Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Navbar Styling */
+#navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 15px 20px;
+    z-index: 100;
+}
+
+#navbar ul {
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+}
+
+#navbar li {
+    margin-left: 20px;
+}
+
+#navbar a {
+    text-decoration: none;
+    color: #f0f0f0;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    font-family: 'Folsom', sans-serif;
+}
+
+#navbar a:hover {
+    color: #d3a87e;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(135deg, #416f6b, #962bb4);
+    color: #ffffff;
+    padding: 0 50px;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+}
+
+.hero-content h1 {
+    margin: 0;
+}
+
+.lucien {
+    width: 800px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.profile-pic {
+    width: 600px;
+    height: auto;
+}
+
+/* Section Styling */
+section {
+    position: relative;
+    scroll-margin-top: 40px;
+    padding: 40px 40px;
+    margin-left: 40px; /* Adjusted to match consistency */
+}
+
+section::before {
+    content: "";
+    display: block;
+    height: 40px;
+    margin-top: -40px;
+    visibility: hidden;
+}
+
+section h2 {
+    font-size: 2rem;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: #fbc2eb;
+    font-family: 'Folsom', sans-serif;
+    line-height: 1.5;
+}
+
+h2 {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1); /* Adjust the values as needed */
+}
+
+h3 {
+
+    margin-top: 40px;
+    padding-left: 40px;
+    text-align: left; /* Align the text to the left */
+    font-size: 1.5rem; /* Adjust the font size for better visibility */
+    font-weight: bold; /* Make the text bold */
+    color: #64cbd4; /* Base color for the text */
+    margin-bottom: 40px; /* Space below each h3 */
+    font-family: 'Folsom', sans-serif; /* Custom font for titles */
+    opacity: 1;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 1); /* Initial glow */
+    animation: glowing-text 6s infinite alternate; /* Apply animation */
+    display: inline-block; /* Ensure proper inline block behavior */
+}
+
+/* Keyframes for glowing text animation */
+@keyframes glowing-text {
+    0% {
+        text-shadow: 0 0 5px rgba(255, 255, 255, 0.4);
+    }
+    100% {
+        text-shadow: 0 0 20px rgba(68, 226, 79, 0.9), 0 0 30px rgba(220, 50, 226, 0.9);
+    }
+}
+/* Section Container Styling */
+.section-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 40px 0;
+    align-items: center; /* Aligns items vertically in the center */
+
+}
+
+/* Text Section Styling */
+.section-text {
+    flex: 1;
+    margin-right: 20px; /* Adds some space between text and image */
+    padding-left: 20px;
+    line-height: 1.5;
+    font-size: 1.4rem;
+}
+
+.section-text h2, .section-text h3 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #fbc2eb;
+    font-family: 'Folsom', sans-serif;
+}
+
+.section-text p {
+    font-size: 1.3rem;
+    line-height: 2;
+    color: #f0f0f0;
+    text-align: left;
+}
+
+.section-image {
+    flex: 1; /* Takes up available space */
+    text-align: center; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 20px;
+}
+
+.section-container {
+    display: flex;
+    align-items: center; /* Aligns items vertically in the center */
+}
+
+.section-text {
+    flex: 1; /* Takes up available space */
+    margin-right: 20px; /* Adds some space between text and image */
+}
+
+.section-image-tech {
+    flex: 1; /* Takes up available space */
+    text-align: center; /* Centers the image horizontally */
+}
+
+.section-image-tech img {
+    max-width: 100%; /* Ensures the image does not exceed the container's width */
+    height: auto; /* Maintains the image's aspect ratio */
+}
+.section-image-tech {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Adjust as needed */
+    width: 80;
+    padding-left: 60px;
+}
+
+.centered-iframe {
+    height: 350px;
+    margin-bottom: 20px;
+}
+
+.section-image img {
+    max-width: 100%; /* Ensures the image does not exceed the container's width */
+    height: auto; /* Maintains the image's aspect ratio */
+    width: 80%; /* Adjust this value to make the image larger */
+}
+
+
+/* Iframes for Media */
+.media-content-2 {
+    display: block;
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    margin: 20px 0;
+    text-align: left;
+    box-sizing: border-box;
+    box-shadow: 0 0 50px rgba(28, 29, 30, 0.8); /* Initial glow */
+}
+
+/* Iframes for Media */
+.media-content {
+    display: block;
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    margin: 20px 0;
+    text-align: left;
+    box-sizing: border-box;
+    margin-left: 100px;
+    box-shadow: 0 0 50px rgba(35, 155, 255, 0.4); /* Initial glow */
+    animation: glowing-tunes 0.1s infinite alternate; /* Apply animation */
+}
+
+
+/* Keyframes for glowing text animation */
+@keyframes glowing-tunes {
+    0% {
+        text-shadow: 5 5 5px rgba(96, 227, 78, 0.4);
+    }
+    100% {
+        text-shadow: 4 4 20px rgba(93, 119, 236, 0.9), 0 0 30px rgba(220, 50, 226, 0.9);
+    }
+}
+
+.media-content iframe {
+    width: 100%;
+    height: 450px;
+    max-width: 800px;
+    border: none;
+    padding-left: 100px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Added box-shadow */
+}
+
+.media-content-2 iframe {
+    width: 100%;
+    height: 450px;
+    max-width: 800px;
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Added box-shadow */
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+    .section-container {
+        flex-direction: column;
+    }
+
+    .section-text {
+        padding-right: 0;
+    }
+}
+/* Footer Styling */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    color: #ffffff;
+    font-family: 'Folsom', sans-serif;
+}
+
+/* Flexbox container for media content and text */
+.flex-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between; /* Distribute space evenly */
+    width: 100%; /* Take up the full width of the page */
+    margin-bottom: 20px; /* Add some space below the container */
+}
+
+.flex-container .media-content {
+    flex: 1; /* Allow the embeds to take up equal space */
+    min-width: 300px; /* Ensure a minimum width for the embeds */
+    margin-right: 20px;
+}
+
+.flex-container .section-text {
+    flex: 2; /* Allow the text to take up more space */
+    max-width: 600px; /* Optional: Set a max width for the text */
+}
+
+#video {
+    position: relative;
+    overflow: hidden; /* Ensure images do not overflow the section */
+}
+
+.section-container {
+    position: relative;
+    z-index: 1;
+}
+
+.section-text {
+    position: relative;
+    z-index: 2;
+    color: rgb(255, 255, 255); /* Adjust text color for better visibility */
+    padding: 20px; /* Add padding for better text positioning */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1); /* Adjust the values as needed */
+}
+
+.section-images {
+    display: flex;
+    flex-direction: row; /* Stack images horizontally */
+    justify-content: center; /* Center images horizontally */
+    flex-wrap: wrap; /* Allow images to wrap to the next line if needed */
+    margin-top: 20px; /* Add some space between text and images */
+}
+
+.section-images img {
+    flex: 1 1 30%; /* Allow images to grow and shrink as needed, each taking up 30% of the container */
+    max-width: 30%; /* Ensure images do not exceed 30% of the container width */
+    height: auto; /* Maintain aspect ratio */
+    margin: 10px; /* Add space between images */
+    opacity: 0; /* Start with images hidden */
+    transition: opacity 1s ease-in-out;
+    box-shadow: 0 0 15px rgba(129, 226, 114, 0.5); /* Add glow effect */
+}
+
+.section-images img:nth-child(1) {
+    animation: slideshow 4s infinite;
+}
+
+.section-images img:nth-child(2) {
+    animation: slideshow 4s infinite;
+}
+
+.section-images img:nth-child(3) {
+    animation: slideshow 4s infinite;
+}
+
+.flex-container-2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.section-image-2, .section-text-2 {
+    flex: 1;
+    margin: 10px;
+}
+
+.section-image-2 img {
+    max-width: 60%;
+    height: auto;
+}
+
+.section-text-2 {
+    text-align: left;
+    font-size: 1.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1); /* Adjust the values as needed */
+}
+
+@keyframes slideshow {
+    0% { opacity: 1; }
+    33% { opacity: 1; }
+    66% { opacity: 1; }
+    100% { opacity: 1; }
+}
+
+.email {
+    color: #6ff0e6;
+    font-size: 1.5rem;
+    font-family: 'Folsom', sans-serif;
+    text-align: center;
+    margin-top: 20px;
+    padding-left: 60px;
+}
